@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Repuestos de Carros</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e60000;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .price {
+            color: #e60000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #e60000;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .about, .contact {
+            background: white;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input, .contact textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .contact button {
+            background: #e60000;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="inicio">
+    <h1>Venta de Repuestos de Carros</h1>
+    <p>Calidad garantizada para tu vehículo</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero">
+    <h1>Repuestos Automotrices</h1>
+    <p>Encuentra todo lo que tu carro necesita</p>
+</section>
+
+<section id="productos">
+    <h2>Productos</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="image/image.png">
+            <h3>Batería de Auto</h3>
+            <p class="price">S/ 250</p>
+            <a href="#" class="btn" onclick="comprar('Batería de Auto', 250)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy.png">
+            <h3>Aceite de Motor</h3>
+            <p class="price">S/ 80</p>
+            <a href="#" class="btn" onclick="comprar('Aceite de Motor', 80)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 2.png">
+            <h3>Pastillas de Freno</h3>
+            <p class="price">S/ 120</p>
+            <a href="#" class="btn" onclick="comprar('Pastillas de Freno', 120)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 3.png">
+            <h3>Filtro de Aire</h3>
+            <p class="price">S/ 45</p>
+            <a href="#" class="btn" onclick="comprar('Filtro de Aire', 45)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 4.png">
+            <h3>Amortiguadores</h3>
+            <p class="price">S/ 180</p>
+            <a href="#" class="btn" onclick="comprar('Amortiguadores', 180)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 5.png">
+            <h3>Alternador</h3>
+            <p class="price">S/ 400</p>
+            <a href="#" class="btn" onclick="comprar('Alternador', 400)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 6.png">
+            <h3>Bujías</h3>
+            <p class="price">S/ 60</p>
+            <a href="#" class="btn" onclick="comprar('Bujías', 60)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 7.png">
+            <h3>Radiador</h3>
+            <p class="price">S/ 320</p>
+            <a href="#" class="btn" onclick="comprar('Radiador', 320)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 8.png">
+            <h3>Kit de Embrague</h3>
+            <p class="price">S/ 500</p>
+            <a href="#" class="btn" onclick="comprar('Kit de Embrague', 500)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 9.png">
+            <h3>Bomba de Gasolina</h3>
+            <p class="price">S/ 280</p>
+            <a href="#" class="btn" onclick="comprar('Bomba de Gasolina', 280)">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="image/image copy 10.png">
+            <h3>Filtro de Aceite</h3>
+            <p class="price">S/ 35</p>
+            <a href="#" class="btn" onclick="comprar('Filtro de Aceite', 35)">Comprar</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="nosotros">
+    <div class="about">
+        <h2>Nosotros</h2>
+        <p>
+            Somos una empresa especializada en repuestos automotrices de alta calidad.
+            Ofrecemos productos garantizados y atención confiable para todo tipo de vehículos.
+        </p>
+    </div>
+</section>
+
+<section id="contacto">
+    <div class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" rows="5"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Venta de Repuestos de Carros</p>
+</footer>
+
+<script>
+function comprar(producto, precio) {
+    alert("🛒 Producto: " + producto + "\n💰 Precio: S/ " + precio);
+}
+</script>
+
+</body>
+</html>
